@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Tatoo Inventory App</h1>
+
+  {% for item in items %}
+    <div class="item">
+      <form
+        action="{{ url_for('delete', id=item.id) }}"
+        method="POST"
+      >
+        <p>{{ item.name }}</p>
+        <p>{{ item.amount }}</p>
+        
+        <a href="{{ url_for('get_item', id=item.id) }}">See More</a>
+        <a href="{{ url_for('update', id=item.id) }}">Edit</a>
+        <button type="submit">Delete</button>
+      </form>
+    </div>
+  {% endfor %}
+{% endblock %}

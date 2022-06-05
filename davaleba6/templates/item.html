@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <p>Name: {{ item.name }}</p>
+  <p>Amount: {{ item.amount }}</p>
+  <p>Price: {{ item.price }}</p>
+  <p>Create Date: {{ item.created_at }}</p>
+
+  <a href="/">Go Back</a>
+
+{% endblock %}

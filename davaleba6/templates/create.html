@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+  <h3>Add new item to the inventory</h3>
+  <form method="post" action="/add">
+    <p>
+      <label for="name">Name</label>
+      <input type="text" name="name" required/>
+    </p>
+
+    <p>
+      <label for="amount">Amount</label>
+      <input type="number" min="0" name="amount" required/>
+    </p>
+
+    <p>
+      <label for="price">Price</label>
+      <input type="number" step="any" min="0" name="price" required/>
+    </p>
+
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}
